@@ -11,8 +11,10 @@ import { HealthComponent } from './pages/health/health.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
 import { EntertainmentComponent } from './pages/entertainment/entertainment.component';
 import { NewsTemplateComponent } from './templates/news-template/news-template.component';
-
-
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { RouterModule } from '@angular/router';
+import {MenubarModule} from 'primeng/menubar';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,14 @@ import { NewsTemplateComponent } from './templates/news-template/news-template.c
     HealthComponent,
     TechnologyComponent,
     EntertainmentComponent,
-    NewsTemplateComponent
+    NewsTemplateComponent,
+    WelcomeComponent
   ],
   imports: [
-    CommonModule
+    RouterModule,
+    CommonModule,
+    MenubarModule,
+    ButtonModule
   ],
   exports: [MainComponent]
 })
