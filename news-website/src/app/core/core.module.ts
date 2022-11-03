@@ -14,6 +14,7 @@ import { NewsTemplateComponent } from './templates/news-template/news-template.c
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { RouterModule } from '@angular/router';
 import {MenubarModule} from 'primeng/menubar';
+import { MenuItem } from 'primeng/api';
 import {ButtonModule} from 'primeng/button';
 
 @NgModule({
