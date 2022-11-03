@@ -1,5 +1,5 @@
 <div class="card" *ngIf="!!apiResultArticles">
-    <p-dataView #dv [value]="apiResultArticles" layout="grid">
+    <p-dataView #dv [value]="apiResultArticles" layout="list">
         <ng-template pTemplate="header">
             <div class="flex flex-column md:flex-row md:justify-content-between">
                 <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
