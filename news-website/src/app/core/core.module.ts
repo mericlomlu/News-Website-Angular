@@ -14,8 +14,15 @@ import { NewsTemplateComponent } from './templates/news-template/news-template.c
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { RouterModule } from '@angular/router';
 import {MenubarModule} from 'primeng/menubar';
-import { MenuItem } from 'primeng/api';
 import {ButtonModule} from 'primeng/button';
+import {DataViewModule} from 'primeng/dataview';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DialogModule} from 'primeng/dialog';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,15 @@ import {ButtonModule} from 'primeng/button';
     RouterModule,
     CommonModule,
     MenubarModule,
-    ButtonModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    DataViewModule,
+    PanelModule,
+    DialogModule,
+    DropdownModule,
+    InputTextModule,
+    ButtonModule,
+    FormsModule
   ],
   exports: [MainComponent]
 })

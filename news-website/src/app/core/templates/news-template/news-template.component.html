@@ -1,1 +1,43 @@
-<p>news-template works!</p>
+<div class="card" *ngIf="!!apiResultArticles">
+    <p-dataView #dv [value]="apiResultArticles" layout="grid">
+        <ng-template pTemplate="header">
+            <div class="flex flex-column md:flex-row md:justify-content-between">
+                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+            </div>
+        </ng-template>
+        <ng-template let-article pTemplate="listItem">
+            <div class="p-col-12">
+                <div class="product-list-item">
+                    <img src="{{article.urlToImage}}">
+                    <div class="product-list-detail">
+                        <div class="product-name">{{article.title}}</div>
+                        <div class="product-description"> {{article.description}}</div>
+                        <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{article.source.name}} - {{article.publishedAt | date: 'dd/MM/yyyy HH:mm' : 'UTC+offset'}}</span>
+                    </div>
+                    <div class="product-list-action">
+                        <p-button icon="pi pi-external-link" label="Read More"><a href="{{article.url}}" target="_blank"></a></p-button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template let-article pTemplate="gridItem">
+            <div class="col-12 md:col-4">
+                <div class="product-grid-item card">
+                    <img src="{{article.urlToImage}}">
+                    <div class="product-grid-item-top">
+                        <div>
+                            <i class="pi pi-tag product-category-icon"></i>
+                            <span class="product-category">{{article.source.name}} - {{article.publishedAt | date: 'dd/MM/yyyy HH:mm' : 'UTC+offset'}}</span>
+                        </div>
+                    </div>
+                    <div class="product-grid-item-content">
+                        <div class="product-name">{{article.title}}</div>
+                        <div class="product-description"> {{article.description}}</div>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <p-button icon="pi pi-external-link" label="Read More"><a href="{{article.url}}" target="_blank"></a></p-button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>

@@ -1,1 +1,5 @@
-<p-menubar [model]="items"></p-menubar>
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <a routerLink="/home"><img src="../../../../assets/images/project-logo.png"  height="60" class="mr-2"></a>
+    </ng-template>
+</p-menubar>
