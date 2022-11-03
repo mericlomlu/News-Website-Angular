@@ -30,6 +30,7 @@ import { NewsTemplateComponent } from './templates/news-template/news-template.c
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [MainComponent]
 })
 export class CoreModule { }
