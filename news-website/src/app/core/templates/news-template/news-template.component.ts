@@ -29,4 +29,8 @@ export class NewsTemplateComponent implements OnInit {
     })
   }
 
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
+
 }

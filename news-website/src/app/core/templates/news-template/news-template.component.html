@@ -5,7 +5,7 @@
                 <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
             </div>
         </ng-template>
-        <ng-template let-article pTemplate="listItem">
+        <ng-template let-article  pTemplate="listItem">
             <div class="p-col-12">
                 <div class="product-list-item">
                     <img src="{{article.urlToImage}}">
@@ -15,7 +15,7 @@
                         <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{article.source.name}} - {{article.publishedAt | date: 'dd/MM/yyyy HH:mm' : 'UTC+offset'}}</span>
                     </div>
                     <div class="product-list-action">
-                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More"><a href="{{article.url}}" target="_blank"></a></p-button>
+                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More" (click)="goToLink(article.url)"></p-button>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         <div class="product-description"> {{article.description}}</div>
                     </div>
                     <div class="product-grid-item-bottom">
-                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More"><a href="{{article.url}}" target="_blank"></a></p-button>
+                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More" (click)="goToLink(article.url)"></p-button>
                     </div>
                 </div>
             </div>
