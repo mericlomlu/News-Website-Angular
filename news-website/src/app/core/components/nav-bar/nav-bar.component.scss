@@ -1,10 +1,18 @@
-:host ::ng-deep .p-menubar .p-submenu-list .p-menu-separator {
-    border-top: 1px solid #3b82f6;
-    margin: 0.125rem 0;
-}
+
 
 
 :host ::ng-deep .p-menubar {
     border-bottom: 1px solid #3b82f6; 
+
+    .p-submenu-list {
+        width: auto;
+    }
+
+    .p-submenu-list{
+        .p-menu-separator {
+            border-top: 1px solid #3b82f6;
+            margin: 0.125rem 0;
+        }
+    } 
 }
 

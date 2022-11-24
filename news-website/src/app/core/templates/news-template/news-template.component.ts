@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { format } from 'date-fns';
 import { SelectItem } from 'primeng/api';
 import { NewsApiService } from '../../services/news-api.service';
 
@@ -33,4 +34,9 @@ export class NewsTemplateComponent implements OnInit {
     window.open(url, "_blank");
   }
 
+  formatDate(articleDate: Date){
+    const dateString = format(new Date(articleDate), 'dd/MM/yyyy');
+
+    return dateString;
+  }
 }

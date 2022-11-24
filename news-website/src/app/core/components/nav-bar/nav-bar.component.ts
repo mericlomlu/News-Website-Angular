@@ -25,11 +25,11 @@ export class NavBarComponent implements OnInit {
         routerLink: ['/home']
       },
       {
-        label: 'News Categories',
+        label: 'Categories',
         icon: 'pi pi-list',
         items: [
           {
-            label: 'Business News',
+            label: 'Business',
             icon: 'pi pi-briefcase',
             routerLink: ['/business']
           },
@@ -37,7 +37,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'Entertainment News',
+            label: 'Entertainment',
             icon: 'pi pi-gift',
             routerLink: ['/entertainment']
           },
@@ -45,7 +45,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'General News',
+            label: 'General',
             icon: 'pi pi-globe',
             routerLink: ['/general']
           },
@@ -53,7 +53,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'Health News',
+            label: 'Health',
             icon: 'pi pi-heart',
             routerLink: ['/health']
           },
@@ -61,7 +61,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'Science News',
+            label: 'Science',
             icon: 'pi pi-calculator',
             routerLink: ['/science']
           },
@@ -69,7 +69,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'Sports News',
+            label: 'Sports',
             icon: 'pi pi-stopwatch',
             routerLink: ['/sports']
           },
@@ -77,7 +77,7 @@ export class NavBarComponent implements OnInit {
             separator:true
           },
           {
-            label: 'Technology News',
+            label: 'Technology',
             icon: 'pi pi-desktop',
             routerLink: ['/technology']
           },

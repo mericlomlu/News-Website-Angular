@@ -1,43 +1,19 @@
-<div class="card" *ngIf="!!apiResultArticles">
-    <p-dataView #dv [value]="apiResultArticles" layout="list">
-        <ng-template pTemplate="header">
-            <div class="flex flex-column md:flex-row md:justify-content-between">
-                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
-            </div>
-        </ng-template>
-        <ng-template let-article  pTemplate="listItem">
-            <div class="p-col-12">
-                <div class="product-list-item">
-                    <img src="{{article.urlToImage}}">
-                    <div class="product-list-detail">
-                        <div class="product-name">{{article.title}}</div>
-                        <div class="product-description"> {{article.description}}</div>
-                        <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{article.source.name}} - {{article.publishedAt | date: 'dd/MM/yyyy HH:mm' : 'UTC+offset'}}</span>
-                    </div>
-                    <div class="product-list-action">
-                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More" (click)="goToLink(article.url)"></p-button>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template let-article pTemplate="gridItem">
-            <div class="col-12 md:col-4">
-                <div class="product-grid-item card">
-                    <img src="{{article.urlToImage}}">
-                    <div class="product-grid-item-top">
-                        <div>
-                            <i class="pi pi-tag product-category-icon"></i>
-                            <span class="product-category">{{article.source.name}} - {{article.publishedAt | date: 'dd/MM/yyyy HH:mm' : 'UTC+offset'}}</span>
-                        </div>
-                    </div>
-                    <div class="product-grid-item-content">
-                        <div class="product-name">{{article.title}}</div>
-                        <div class="product-description"> {{article.description}}</div>
-                    </div>
-                    <div class="product-grid-item-bottom">
-                        <p-button icon="pi pi-external-link" styleClass="p-button-sm" label="Read More" (click)="goToLink(article.url)"></p-button>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-    </p-dataView>
+<div class="p-grid p-col-11 p-mx-6 p-flex-column p-justify-center p-align-center" *ngIf="!!apiResultArticles">
+    <div class="p-grid p-col-10 p-my-6" *ngFor="let article of apiResultArticles">
+        
+            <p-card [header]="article?.title" [subheader]="formatDate(article?.publishedAt)" styleClass="col-6 mx-6">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="article?.urlToImage">
+                </ng-template>
+                <ng-template pTemplate="content">
+                    <p class="p-mx-6">{{article?.description}}</p>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                    <p-button label="Read More" icon="pi pi-external-link" (click)="goToLink(article.url)" class="p-float-right"></p-button>
+                </ng-template>
+            </p-card>
+    </div>
+</div>
+
+
+

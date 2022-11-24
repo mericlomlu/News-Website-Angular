@@ -23,6 +23,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DialogModule} from 'primeng/dialog';
 import {PanelModule} from 'primeng/panel';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {PanelModule} from 'primeng/panel';
     DropdownModule,
     InputTextModule,
     ButtonModule,
-    FormsModule
+    FormsModule,
+    CardModule
   ],
   exports: [MainComponent]
 })
